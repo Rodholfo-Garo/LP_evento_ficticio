@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header class="hero">
+        <div class="nav-container">
+            <nav class="nav-container__nav">
+                <div class="nav-container__nav__logo">
+                    A Super Festa
+                </div>                
+                <ul class="nav-container__nav__menu">
+                    <li class="nav-container__nav__menu__item">Sobre</li>
+                    <li class="nav-container__nav__menu__item">Contato</li>
+                </ul>
+                <div class="nav-container__nav__botao-menu">
+                    <input type="checkbox" name="" id="checkbox-menu">
+                    <label for="checkbox-menu" >
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </label>
+                    
+                </div>
+            </nav>            
+        </div>
+        <section class="hero__content">
+            <div class="container">
+                
+                <img class="hero__content__image" src="./images/gift.svg" alt="Presente">
+                <p class="hero__content__text">
+                    O maior evento do Brasil começa em <span id="contador">30 dias 21hrs 35min. 15segundos</span> 
+                </p>
+                <div class="infos-bar">
+                    <ul class="infos-bar__infos">
+                        <li class="infos-bar__infos__item">
+                            <b>Localização</b>
+                            Campo Limpo Paulista
+                        </li>
+                        <li class="infos-bar__infos__item">
+                            <b>Preço</b>
+                            A partir de R$250,00
+                        </li>
+                        <li class="infos-bar__infos__item">
+                            <b>Dia do Evento</b>
+                            06/03/2024 às 19:00hrs
+                        </li>
+                    </ul>
+                    <a class="button" href="#">
+                        Garanta Sua Vaga
+                    </a>
+                </div>
+            </div>
+        </section>       
+    </header>
+    <section class="about">
+        <div class="container">
+            <h2 class="subTitle">Sobre o Evento</h2>
+            <div data-aos="fade-right" class="about__events  about__events--row-reverse">
+                <section class="about__events__food">
+                    <h2 class="about__events__title">Food Trucks</h2>
+                    <p class="about__events__description text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni assumenda, magnam totam ad, asperiores ipsa excepturi recusandae nihil, quia cum. Odit quaerat eveniet non qui eos. Eius, odit sequi!</p>
+                </section>
+                <img src="./images/foodTruck.jpg" alt="Comida">
+            </div>
+            <div data-aos="fade-left" class="about__events">
+                <section class="about__events__drinks">
+                    <h2 class="about__events__title">Bebidas</h2>
+                    <p class="about__events__description text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni assumenda, magnam totam ad, asperiores ipsa excepturi recusandae nihil, quia cum. Odit quaerat eveniet non qui eos. Eius, odit sequi!</p>
+                </section>
+                <img src="./images/drinks.jpg" alt="Bebidas">
+            </div>
+        </div>        
+    </section>
+    <section class="faq">
+        <div class="container">
+            <h2 class="subTitle">
+                O que você deve saber sobre o evento
+            </h2>
+            <ul class="faq__questions">
+                <li class="faq__questions__item">
+                    <div data-faq-question class="faq__questions__item__question">
+                        Pergunta
+                    </div>
+                    <div class="faq__questions__item__answer text">
+                        Resposta
+                    </div>
+                </li>
+                <li class="faq__questions__item">
+                    <div data-faq-question class="faq__questions__item__question">
+                        Pergunta
+                    </div>
+                    <div class="faq__questions__item__answer text">
+                        Resposta
+                    </div>
+                </li>
+                <li class="faq__questions__item">
+                    <div data-faq-question class="faq__questions__item__question">
+                        Pergunta
+                    </div>
+                    <div class="faq__questions__item__answer text">
+                        Resposta
+                    </div>
+                </li>
+            </ul>            
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <img class="footer__logo" src="./images/birthday-154397_1280.png" alt="Aniversario">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <div class="language-selector"><img src="./images/globe.svg" alt="">
+                        <select name="" id="">
+                            <option>
+                                English
+                            </option>
+                            <option>
+                                Protuguês
+                            </option>
+                        </select>
+                    </div>
+                </li>
+                <li class="footer__links__item">
+                    <a class="textSmall" href="#">Termos e Condições de Uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="textSmall" href="#">Política de privacidade</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="textSmall" href="#">Proteção de Dados no Brasil</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="textSmall" href="#">Anúncios personalizados</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="textSmall" href="#">Dispositivos compatíveis</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="textSmall" href="#">Ajuda</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="textSmall" href="#">Sobre</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./scripts/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+</html>

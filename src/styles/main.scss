@@ -1,0 +1,88 @@
+@use 'hero';
+@use 'components/nav';
+@use 'components/infos_bar';
+@use 'variables';
+@use 'components/buttons';
+@use '_about';
+@use 'faq';
+@use 'footer';
+
+@mixin title{
+    color: variables.$textColor;
+    font-size: 50px;
+}
+
+@mixin subTitle{
+    color: variables.$textColor;
+    font-size: 40px;
+}
+
+@mixin text{
+    color: variables.$textColor;
+}
+
+@mixin textSmall{
+    color: variables.$textColor;
+    font-size: 10px;
+
+}
+
+
+.title{
+    @include title;
+}
+
+.subTitle{
+    @include subTitle;
+}
+
+.text{
+    @include text;
+}
+
+.textSmall{
+    @include textSmall;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    list-style: none;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;    
+}
+.botao-menu {
+            
+    #checkbox-menu {
+        position: absolute;
+        // opacity: 0;
+    }
+
+    &__label {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        height: 22px;
+        width: 30px;
+
+        span {
+            &.bar {
+                position: absolute;
+                display: block;
+                height: 5px;
+                width: 100%;
+                border-radius: 30px;
+                background-color: #f16234;
+                transition: 0.25s ease-in-out;
+            }
+        }
+    }
+}

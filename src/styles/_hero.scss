@@ -1,0 +1,65 @@
+@use'variables';
+
+
+.hero{
+    position: relative;
+    min-height: 400px;  /* O elemento .hero terá pelo menos 400 pixels de altura */    
+    background-image: url(../images/adi-goldstein-Hli3R6LKibo-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;   
+    
+  
+    
+    &__content{
+        height: 100%;
+        padding-top:64px;
+        padding-bottom: 100px;
+        min-height: 400px;
+        position: relative;
+        
+        &::before{
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: variables.$secondaryTextColor;
+            content: '';
+            opacity: .5;
+        
+        }
+        &__text{
+            position: relative;
+            margin-top: 64px;
+            margin-bottom: 64px;
+            font-size: 40px;
+            line-height: 56px;
+            font-weight: 800px;
+            text-align: center;
+            color: #fff;
+        }
+    
+        &__image{
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            height: 80px;
+        }
+    
+        @media (max-width:640px){
+            padding: 40px 0;
+    
+            &__image {
+                height: 40px;
+            }
+    
+            &__text {
+                font-size: 22px;
+                line-height: 24px;
+                margin: 24px 0;
+            }
+        }
+    }
+
+}

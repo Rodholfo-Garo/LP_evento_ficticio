@@ -1,0 +1,44 @@
+@use 'variables';
+
+
+.about{
+    background-image: linear-gradient(95deg, variables.$navColor, yellow);
+    padding-top: 25px;
+    
+    
+        &__events{
+        display: flex;
+        gap: 40px;
+        padding: 65px 0;
+        
+      
+
+        &__title{
+            font-size: 50px;
+            padding-bottom: 25px;
+            color: variables.$textColor;  
+            
+            
+            
+        }
+            &--row-reverse{
+                flex-direction: row-reverse;
+            }
+            
+            img{
+                max-width: 450px;
+                border-radius: 8px;
+                box-shadow: 10px 10px 5px grey;
+            }
+
+            @media (max-width:640px){
+                display: block;
+                
+                img{
+                    max-width: 100%;
+                    margin-top: 20px;
+                }
+            }
+        
+    }
+}

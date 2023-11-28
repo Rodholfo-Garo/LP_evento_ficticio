@@ -1,0 +1,132 @@
+@use '../variables';
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(variables.$navColor, $alpha: .8);
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        max-width: 1024px;
+        width: 100%;
+
+        &__logo {
+            color: #fff;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        &__menu {
+            display: flex;
+            gap: 40px;
+            text-decoration: none;
+            list-style: none;
+            color: #fff;
+            border: 5px solid transparent;
+
+            @media(max-width:767px) {
+                display: none;
+            }
+
+            &__item {
+                cursor: pointer;
+                border: none;
+                border-bottom: 5px solid transparent;
+
+                @media(max-width:768px) {
+                    display: none;
+                }
+
+                &:hover {
+                    color: aqua;
+                    border-bottom: 5px solid #fff;
+                }
+
+                @media(max-width:768px) {
+                    display: none;
+                }
+            }
+
+        }
+
+        &__botao-menu {
+            padding-right: 10px;
+
+            @media(min-width:768px) {
+                display: none;
+            }
+
+            #checkbox-menu {
+                position: absolute;
+                opacity: 0;
+            }
+
+            //seletor ~ (irmão subsequente) , o seletor + seria para (irmão adjacente) 
+
+            #checkbox-menu:checked~label span.bar:nth-child(1) {
+                transform: rotate(-45deg);
+                top: 8px;
+            }
+
+            #checkbox-menu:checked~label span.bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            #checkbox-menu:checked~label span.bar:nth-child(3) {
+                transform: rotate(45deg);
+                top: 8px;
+                ;
+            }
+
+            & label {
+                cursor: pointer;
+                position: relative;
+                display: block;
+                height: 22px;
+                width: 30px;
+
+                span {
+                    &.bar {
+                        position: absolute;
+                        display: block;
+                        height: 5px;
+                        width: 100%;
+                        border-radius: 30px;
+                        background-color: #f16234;
+                        transition: 0.25s ease-in-out;
+
+                    }
+                }
+
+                span.bar:nth-child(1) {
+                    top: 0;
+                }
+
+                span.bar:nth-child(2) {
+                    top: 8px;
+                }
+
+                span.bar:nth-child(3) {
+                    top: 16px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .nav-container__nav__menu {
+                    display: none;
+                    /* Oculta o menu por padrão em telas menores */
+                }
+
+                .nav-container__nav__menu.show {
+                    display: flex;
+                    /* Exibe o menu quando a classe 'show' é aplicada */
+                }
+            }
+        }
+    }
+}
